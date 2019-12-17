@@ -3,7 +3,12 @@ add_library(template)
 target_include_directories(template
 PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-PRIVATE
+
+if(BUILD_TESTING)
+    PUBLIC
+else()
+    PRIVATE
+endif()
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
 )
 

@@ -1,15 +1,11 @@
 # Modern CMake Template
 require CMake >= 3.13.
 
-## Build
+## Build and Test
 ```
 mkdir build
 cd build
-cmake ..
+cmake  -DBUILD_TESTING=ON ..
 make
-```
-
-## Test
-```
 make test
 ```
